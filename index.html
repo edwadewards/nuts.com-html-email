@@ -5,6 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="icon" type="image/x-icon" href="img/favicon.png">
 <title>Nuts.com Promotional HTML Email</title>
 <style type="text/css">
@@ -36,9 +38,12 @@
   }
   h2 {
     font-size: clamp(1rem, 1.5rem + 1.5vw, 2.45rem);
-    border-bottom: 3px solid;
-    width: 100%;
-    padding: .45rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+  a {
+    color: inherit;
   }
   button {
     background-color: black;
@@ -69,6 +74,17 @@
 		border-spacing: 0;
     color: black;
   }
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .flex-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .header-banner {
     background-color: #498be3;
     color: #fff;
@@ -77,6 +93,28 @@
   .product-info {
     line-height: 1.7;
     font-size: clamp(.9rem, 1rem + 1vw, 2rem);
+  }
+  .img-grid {
+    border-top: 3px solid;
+    columns: 2;
+  }
+  .img-grid > img {
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px #ccc;
+  }
+  .footer-signoff {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+  .social-link {
+    height: 2rem;
+    width: 2rem;
+    background-color: #000000;
+    color: #fff;
+    padding: .8rem;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    text-decoration: none;
   }
 </style>	
 </head>
@@ -94,7 +132,7 @@
         <td>
           <table width="100%">
             <tr>
-              <td class="flex-column">
+              <td class="flex-column px-3" style="background-color: rgb(255, 239, 239);">
                 <img src="img/logo.png" alt="Logo with caption: Since 1929">
                 <h1 class="my-2">Make Today Tasty</h1>
                 <p class="product-info">
@@ -110,23 +148,119 @@
 
       <tr>
         <td>
-          <table width="100%" class="m-3">
+          <table width="100%">
             <tr>
-              <td class="flex-column">
-                <h2>Meet The Snack Chomp-ions</h2>
-                <table class="img-grid my-2">
+              <td class="flex-column p-3" style="background-color: rgb(255, 239, 239);">
+                <h2 class="my-3">Meet The Snack Chomp-ions</h2>
+                <table width="100%">
                   <tr>
-                    <td>
-                      <img src="img/nuts-seeds.png" alt="graphic of nuts and seeds">
-                      <img src="img/dried-fruit.png" alt="graphic of dried fruit">
-                      <img src="img/snacks.png" alt="graphic of trail mix">
-                      <img src="img/cookies.png" alt="graphic of chocolate candies">
-                      <img src="img/sweets.png" alt="graphic of gummy worms">
-                      <img src="img/gifts.png" alt="graphic of chocolate covered pretzels">
+                    <td class="img-grid py-4">
+                      <img src="img/nuts-seeds.png" alt="graphic of nuts and seeds" class="my-3">
+                      <img src="img/dried-fruit.png" alt="graphic of dried fruit" class="my-3">
+                      <img src="img/snacks.png" alt="graphic of trail mix" class="my-3">
+                      <img src="img/cookies.png" alt="graphic of chocolate candies" class="my-3">
+                      <img src="img/sweets.png" alt="graphic of gummy worms" class="my-3">
+                      <img src="img/gifts.png" alt="graphic of chocolate covered pretzels" class="my-3">
                     </td>
                   </tr>
                 </table>
-                <button>Shop All</button>
+                <button class="text-bold my-2">Shop All</button>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <table width="100%">
+            <tr>
+              <td class="px-3" style="background-color: #e0b807;">
+                <img src="img/big-banner02.png" alt="package of mixed nuts and snacks">
+                <h3 class="my-2">Gift Snack Happy</h3>
+                <p class="product-info">
+                  Find the perfect present for everybody and every occasion at your fingertips, curated by our gifting specialists.
+                </p>
+                <button class="text-bold mt-2 mb-5">Shop Now</button>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <table width="100%">
+            <tr>
+              <td>
+                <img src="img/small-banner.png" alt="collection of nuts.com snacks">
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr style="background-color: #fff;">
+        <td>
+          <table width="100%" style="background-color: #fff;">
+            <tr>
+              <td class="flex-row p-4">
+                <p class="footer-signoff text-bold">
+                  From <br>Our Family <br>To Yours
+                </p>
+                <img src="img/footer-graphic.png" alt="graphic of happy peanuts" class="mx-5">
+                <p class="footer-signoff text-bold">
+                  100% <br>Satisfaction <br>Guaranteed
+                </p>
+              </td>
+            </tr>
+          </table>
+
+          <table width="100%">
+            <tr>
+              <td class="flex-row my-3">
+                <a href="https://www.facebook.com/NutsDotCom/" target="_blank" class="social-link mx-1 flex-column">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/nutsdotcom/" target="_blank" class="social-link mx-1 flex-column">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/nutsdotcom/" target="_blank" class="social-link mx-1 flex-column">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </td>
+            </tr>
+          </table>
+
+          <table width="100%">
+            <tr>
+              <td class="flex-column mt-3" style="font-family: initial;">
+                <table width="100%">
+                  <tr>
+                    <td>
+                      <p>© 2023 Nuts.com</p>
+                      <p>125 Moen St., Cranford, NJ 07016</p>
+                    </td>
+                  </tr>
+                </table>
+                <table width="100%">
+                  <tr class="flex-row">
+                    <td>
+                      <a href="#">Subscribe</a>
+                      <span class="text-bold mx-2"> | </span>
+                      <a href="#">Contact Us</a>
+                    </td>
+                  </tr>
+                </table>
+                <table width="100%">
+                  <tr>
+                    <td>
+                      <p class="mt-3 px-4">
+                        This promo can only be redeemed by clicking through the buttons on this email. This offer expires on May 19, 2023 at 11:59 PM PDT. One redemption per customer. Cannot be combined with any other offers or substituted for another product. While supplies last.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
               </td>
             </tr>
           </table>
