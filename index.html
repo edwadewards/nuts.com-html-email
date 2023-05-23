@@ -126,6 +126,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     border-radius: 50%;
     text-decoration: none;
   }
+  @media (max-width: 400px) {
+    .mq-flex-col {
+      flex-direction: row;
+    }
+    .mq-padding {
+      padding-left: .35rem;
+    }
+  }
 </style>	
 </head>
 <body>
@@ -202,7 +210,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         <td class="flex-row">
           <table width="50%">
             <tr>
-              <td class="flex-align-left px-5">
+              <td class="flex-align-left mq-padding" style="padding-left: 3.5rem;">
                 <h4>FREE <br>Shipping</h4>
                 <p class="text-bold" style="font-size: 1.2rem">With any $29+ purchase</p>
               </td>
@@ -222,7 +230,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         <td>
           <table width="100%" style="background-color: #fff;">
             <tr>
-              <td class="flex-row p-4">
+              <td class="flex-row mq-flex-col p-4">
                 <p class="footer-signoff text-bold">
                   From <br>Our Family <br>To Yours
                 </p>
