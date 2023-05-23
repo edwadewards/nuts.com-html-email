@@ -29,7 +29,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 		border: 0;
     max-width: 100%;
 	}
-  h1, h2, h3 {
+  h1, h2, h3, h4 {
     font-family: 'Fira Sans', sans-serif;
     font-weight: bolder;
   }
@@ -41,6 +41,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
   }
   h3 {
     font-size: 3rem;
+  }
+  h4 {
+    font-size: 2.75rem;
   }
   a {
     color: inherit;
@@ -84,6 +87,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .flex-align-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    gap: .8rem;
   }
   .header-banner {
     background-color: #498be3;
@@ -189,8 +199,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       </tr>
 
       <tr>
-        <td>
-          <table width="100%">
+        <td class="flex-row">
+          <table width="50%">
+            <tr>
+              <td class="flex-align-left px-5">
+                <h4>FREE <br>Shipping</h4>
+                <p class="text-bold" style="font-size: 1.2rem">With any $29+ purchase</p>
+              </td>
+            </tr>
+          </table>
+          <table width="50%">
             <tr>
               <td>
                 <img src="img/small-banner.png" alt="collection of nuts.com snacks">
