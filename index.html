@@ -31,17 +31,16 @@
     font-weight: bolder;
   }
   h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   h2 {
-    font-size: 2rem;
-  }
-  h3 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
   h4 {
-    font-size: 2rem;
     padding-top: 40px;
+  }
+  h3, h4 {
+    font-size: 1.5rem;
   }
   a {
     color: inherit;
@@ -50,7 +49,7 @@
     background-color: black;
     color: #fff;
     text-transform: uppercase;
-    font-size: 1.2rem;
+    font-size: 1rem;
     letter-spacing: 3px;
     border-radius: 70px;
     padding: 1rem 2rem;
@@ -91,13 +90,14 @@
   }
   .product-info {
     line-height: 1.7;
-    font-size: 1.75rem;
+    font-size: 1.25rem;
+    padding: 0 10px;
   }
   .img-grid {
     border-top: 3px solid;
     padding: 20px 0;
   }
-  .img-grid > img {
+  .img-grid .img {
     max-width: 50%;
     border-radius: 15px;
     box-shadow: 5px 5px 10px #ccc;
@@ -107,39 +107,39 @@
     font-size: 1.2rem;
     text-transform: uppercase;
   }
-</style>
-<style>
-  @media (max-width: 540px) {
+</style>	
+<style type="text/css">
+  @media screen and (max-width:980px) {
+    .img-grid .img {
+      max-width: 40% !important;
+    }
     .two-columns .column {
-      width: 50%;
-      height: 100%;
+      width: 45% !important;
+      height: 100% !important;
     }
     .three-columns { 
-      width: 100%;
-      text-align: center;
-      margin: 0 auto;
+      width: 100% !important;
+      text-align: center !important;
+      margin: 0 auto !important;
     }
     .three-columns .column {
-      max-width: 180px;
-      margin: 0 auto;
-      display: block;
+      width: 100% !important;
+      margin: 0 auto !important;
+      display: block !important;
     }
     h4 {
-      padding-top: 10px;
-      font-size: 1.35rem;
-    }
-    .img-grid > img {
-      max-width: 40%;
+      padding-top: 10px !important;
+      font-size: 1rem !important;
     }
   }
-</style>	
+</style>
 </head>
 <body>
   <center class="wrapper">
     <table class="main" width="100%">
 
       <tr>
-        <td style="background-color: #498be3; color: #fff; font-size: 1.25rem;">
+        <td style="background-color: #498be3; color: #fff; font-size: 1rem;">
           <p><span class="text-bold">FREE SHIPPING</span> WITH ANY $29+ ORDER</p>
         </td>
       </tr>
@@ -171,12 +171,12 @@
                 <table width="100%">
                   <tr>
                     <td class="img-grid">
-                      <img src="https://i.ibb.co/t2JkhPj/nuts-seeds.png" alt="graphic of nuts and seeds"> 
-                      <img src="https://i.ibb.co/TP0qnhb/dried-fruit.png" alt="graphic of dried fruit">
-                      <img src="https://i.ibb.co/LS9dHwr/snacks.png" alt="graphic of trail mix">
-                      <img src="https://i.ibb.co/6g8TTXS/cookies.png" alt="graphic of chocolate candies">
-                      <img src="https://i.ibb.co/CzT4PvL/sweets.png" alt="graphic of gummy worms">
-                      <img src="https://i.ibb.co/TmYPT3t/gifts.png" alt="graphic of chocolate covered pretzels">
+                      <img src="https://i.ibb.co/t2JkhPj/nuts-seeds.png" alt="graphic of nuts and seeds" class="img"> 
+                      <img src="https://i.ibb.co/TP0qnhb/dried-fruit.png" alt="graphic of dried fruit" class="img">
+                      <img src="https://i.ibb.co/LS9dHwr/snacks.png" alt="graphic of trail mix" class="img">
+                      <img src="https://i.ibb.co/6g8TTXS/cookies.png" alt="graphic of chocolate candies" class="img">
+                      <img src="https://i.ibb.co/CzT4PvL/sweets.png" alt="graphic of gummy worms" class="img">
+                      <img src="https://i.ibb.co/TmYPT3t/gifts.png" alt="graphic of chocolate covered pretzels" class="img">
                     </td>
                   </tr>
                 </table>
@@ -210,7 +210,7 @@
             <tr>
               <td style="text-align: left; padding-left: 1rem;">
                 <h4 style="margin: 0;">FREE <br>Shipping</h4>
-                <p class="text-bold" style="font-size: 1rem">With any $29+ purchase</p>
+                <p class="text-bold" style="font-size: .9rem">With any $29+ purchase</p>
               </td>
             </tr>
           </table>
