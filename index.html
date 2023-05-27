@@ -85,6 +85,10 @@
   .two-columns .column {
 		max-width: 300px;
   }
+  .two-columns .column-left {
+    text-align: left; 
+    padding: 0 0 0 1rem;
+  }
   .three-columns .column {
     max-width: 200px; 
   }
@@ -114,8 +118,11 @@
       max-width: 40% !important;
     }
     .two-columns .column {
-      width: 45% !important;
       height: 100% !important;
+      width: 45% !important;
+    }
+    .two-columns .column-left {
+      padding: 0 4rem 0 0 !important;
     }
     .three-columns { 
       width: 100% !important;
@@ -129,7 +136,16 @@
     }
     h4 {
       padding-top: 10px !important;
-      font-size: 1rem !important;
+      
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    h4 {
+      font-size: .85rem !important;
+    }
+    .two-columns p {
+      font-size: .7rem !important;
     }
   }
 </style>
@@ -205,12 +221,12 @@
       </tr>
 
       <tr>
-        <td class="two-columns" style="background-color: #ffefef;">
+        <td class="two-columns" style="background-color: #ffefef; text-align: right;">
           <table class="column">
             <tr>
-              <td style="text-align: left; padding-left: 1rem;">
+              <td class="column-left">
                 <h4 style="margin: 0;">FREE <br>Shipping</h4>
-                <p class="text-bold" style="font-size: .9rem">With any $29+ purchase</p>
+                <p class="text-bold" style="font-size: .85rem;">With any $29+ purchase</p>
               </td>
             </tr>
           </table>
