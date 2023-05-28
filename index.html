@@ -45,17 +45,16 @@
   a {
     color: inherit;
   }
-  button {
+  .btn {
     background-color: black;
     color: #fff;
     text-transform: uppercase;
     font-size: 1rem;
     letter-spacing: 3px;
+    text-decoration: none;
     border-radius: 70px;
     padding: 1rem 2rem;
-    outline: none;
-    border: none;
-    cursor: pointer;
+    display: inline-block;
   }
   .text-bold {
     font-weight: 700;
@@ -152,7 +151,7 @@
 </head>
 <body>
   <center class="wrapper">
-    <table class="main" width="100%">
+    <table role="presentation" class="main" width="100%">
 
       <tr>
         <td style="background-color: #498be3; color: #fff; font-size: 1rem;">
@@ -162,7 +161,7 @@
 
       <tr>
         <td>
-          <table width="100%">
+          <table role="presentation" width="100%">
             <tr>
               <td style="background-color: #ffefef;">
                 <img src="https://i.ibb.co/f8VTgYB/logo.png"  alt="Logo with caption: Since 1929" title="Nuts.com">
@@ -170,7 +169,7 @@
                 <p class="product-info">
                   Add these snack chomp-ions to your cart and get <span class="text-bold">FREE shipping with any $29+ purchase.</span> Offer expires soon.
                 </p>
-                <button class="text-bold" style="margin-bottom: 15px;">Shop Now</button>
+                <a href="#" class="btn text-bold" style="margin: 5px 0 20px 0;">Shop Now</a>
                 <img src="https://i.ibb.co/x6SnCc2/big-banner.png" alt="collection of product from nuts.com" style="width: 100%;">
               </td>
             </tr>
@@ -180,11 +179,11 @@
 
       <tr>
         <td>
-          <table width="100%">
+          <table role="presentation" width="100%">
             <tr>
               <td style="background-color: #ffefef; padding: 1rem;">
                 <h2>Meet The Snack Chomp-ions</h2>
-                <table width="100%">
+                <table role="presentation" width="100%">
                   <tr>
                     <td class="img-grid">
                       <img src="https://i.ibb.co/t2JkhPj/nuts-seeds.png" alt="graphic of nuts and seeds" class="img"> 
@@ -196,7 +195,7 @@
                     </td>
                   </tr>
                 </table>
-                <button class="text-bold" style="margin: 0 0 1rem 0">Shop All</button>
+                <a href="#" class="btn text-bold" style="margin: 0 0 1rem 0">Shop All</a>
               </td>
             </tr>
           </table>
@@ -205,7 +204,7 @@
 
       <tr>
         <td>
-          <table width="100%">
+          <table role="presentation" width="100%">
             <tr>
               <td style="background-color: #e0b807; padding: 0 1.25rem 2rem 1.25rem">
                 <img src="https://i.ibb.co/VYGVgWV/big-banner02.png" alt="package of mixed nuts and snacks">
@@ -213,7 +212,7 @@
                 <p class="product-info">
                   Find the perfect present for everybody and every occasion at your fingertips, curated by our gifting specialists.
                 </p>
-                <button class="text-bold">Shop Now</button>
+                <a href="#" class="btn text-bold">Shop Now</a>
               </td>
             </tr>
           </table>
@@ -222,7 +221,7 @@
 
       <tr>
         <td class="two-columns" style="background-color: #ffefef; text-align: right;">
-          <table class="column">
+          <table role="presentation" class="column">
             <tr>
               <td class="column-left">
                 <h4 style="margin: 0;">FREE <br>Shipping</h4>
@@ -230,7 +229,7 @@
               </td>
             </tr>
           </table>
-          <table class="column">
+          <table role="presentation" class="column">
             <tr>
               <td>
                 <img src="https://i.ibb.co/9WGgx3t/small-banner.png" alt="collection of nuts.com snacks">
@@ -243,7 +242,7 @@
       <tr>
         <td class="three-columns" style="background-color: #fff;">
 
-          <table class="column">
+          <table role="presentation" class="column">
             <tr>
               <td>
                 <p class="footer-signoff text-bold" style="padding-left: 35px;">
@@ -253,7 +252,7 @@
             </tr>
           </table>
 
-          <table class="column">
+          <table role="presentation" class="column">
             <tr>
               <td>
                 <img src="https://i.ibb.co/Jrjh5zk/footer-graphic.png" alt="graphic of happy peanuts">
@@ -261,7 +260,7 @@
             </tr>
           </table>
 
-          <table class="column">
+          <table role="presentation" class="column">
             <tr>
               <td>
                 <p class="footer-signoff text-bold" style="padding-left: 30px;">
@@ -276,10 +275,10 @@
 
       <tr>
         <td>
-          <table width="100%" style="background-color: #fff;">
+          <table role="presentation" width="100%" style="background-color: #fff;">
             <tr>
               <td>
-                <table width="100%" style="margin: 3rem 0 2rem 0;">
+                <table role="presentation" width="100%" style="margin: 3rem 0 2rem 0;">
                   <tr>
                     <td>
                       <a href="https://www.facebook.com/NutsDotCom/" target="_blank" style="text-decoration: none;">
@@ -295,7 +294,7 @@
                   </tr>
                 </table>
       
-                <table width="100%">
+                <table role="presentation" width="100%">
                   <tr>
                     <td style="font-family: initial; font-size: 14px;">
                       <table width="100%">
@@ -306,7 +305,7 @@
                           </td>
                         </tr>
                       </table>
-                      <table width="100%">
+                      <table role="presentation" width="100%">
                         <tr>
                           <td>
                             <a href="#">Subscribe</a>
@@ -315,7 +314,7 @@
                           </td>
                         </tr>
                       </table>
-                      <table width="100%">
+                      <table role="presentation" width="100%">
                         <tr>
                           <td>
                             <p style="padding: 0 1.25rem">
