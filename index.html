@@ -1,347 +1,523 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nuts.com Promotional HTML Email</title>
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title>Nuts.com</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Source+Sans+Pro:wght@600;700&display=swap');
+
+      html, body {
+        margin: 0 auto !important;
+        padding: 0 !important;
+        /* height: 100% !important; */
+        width: 100% !important;
+        background: #f1f1f1;
+      }
+
+      /* What it does: Stops email clients resizing small text. */
+      * {
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      /* What it does: Stops Outlook from adding extra spacing to tables. */
+      table, td {
+        mso-table-lspace: 0pt !important;
+        mso-table-rspace: 0pt !important;
+      }
+
+      img {
+        -ms-interpolation-mode: bicubic;
+      }  
+
+      /* What it does: Fixes webkit padding issue. */
+      table {
+        border-spacing: 0 !important;
+        border-collapse: collapse !important;
+        table-layout: fixed !important;
+        margin: 0 auto !important;
+      }
+
+      /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      h1, h2, h3, h4 {
+        margin: 0;
+      }
+
+      /* Email Design specific styles */
+      .btn {
+        background-color: black;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1em;
+        letter-spacing: 3px;
+        text-decoration: none;
+        border-radius: 70px;
+        padding: 1em 2em;
+        display: inline-block;
+    }
+
+    .column {
+      vertical-align: top;
+      display: inline-block;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #1a1818 !important;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .mobile-font {
+        font-size: 1em !important;
+      }
+    }
+
+    </style>
 </head>
-<head>
-<style type="text/css">
-  @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Source+Sans+Pro:wght@600;700&display=swap');
-	body {
-		margin: 0;
-    padding: 0;
-		background-color: #cccccc;
-    font-family: 'Source Sans Pro', sans-serif;
-	}
-	table {
-		border-spacing: 0;
-	}
-	td {
-		padding: 0;
-    text-align: center;
-	}
-	img {
-		border: 0;
-    max-width: 100%;
-	}
-  .preheader { 
-    display:none !important; 
-    visibility:hidden; 
-    opacity:0; 
-    color:transparent; 
-    height:0; 
-    width:0; 
-  }
-  h1, h2, h3, h4 {
-    font-family: 'Fira Sans', sans-serif;
-    font-weight: bolder;
-  }
-  h1 {
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 1.75rem;
-  }
-  h4 {
-    padding-top: 40px;
-  }
-  h3, h4 {
-    font-size: 1.5rem;
-  }
-  a {
-    color: inherit;
-  }
-  .btn {
-    background-color: black;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 1rem;
-    letter-spacing: 3px;
-    text-decoration: none;
-    border-radius: 70px;
-    padding: 1rem 2rem;
-    display: inline-block;
-  }
-  .text-bold {
-    font-weight: 700;
-  }
-	.wrapper {
-		width: 100%;
-		table-layout: fixed;
-		background-color: #cccccc;
-		padding-bottom: 3.8rem;
-	}
-  .main {
-    background-color: #efefef;
-		margin: 0 auto;
-		width: 100%;
-		max-width: 600px;
-		border-spacing: 0;
-    color: black;
-  }
-  .two-columns, .three-columns {
-		font-size: 0;
-	}
-  .column {
-    width: 100%;
-    display: inline-block;
-		vertical-align: top;
-  }
-  .two-columns .column {
-		max-width: 300px;
-  }
-  .two-columns .column-left {
-    text-align: left; 
-    padding: 0 0 0 1rem;
-  }
-  .three-columns .column {
-    max-width: 200px; 
-  }
-  .product-info {
-    line-height: 1.7;
-    font-size: 1.25rem;
-    padding: 0 10px;
-  }
-  .img-grid {
-    border-top: 3px solid;
-    padding: 20px 0;
-  }
-  .img-grid .img {
-    max-width: 50%;
-    border-radius: 15px;
-    box-shadow: 5px 5px 10px #ccc;
-    margin: 10px;
-  }
-  .footer-signoff {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-  }
-</style>	
-<style type="text/css">
-  @media screen and (max-width:980px) {
-    .img-grid .img {
-      max-width: 40% !important;
-    }
-    .two-columns .column {
-      height: 100% !important;
-      width: 45% !important;
-    }
-    .two-columns .column-left {
-      padding: 0 4rem 0 0 !important;
-    }
-    .three-columns { 
-      width: 100% !important;
-      text-align: center !important;
-      margin: 0 auto !important;
-    }
-    .three-columns .column {
-      width: 100% !important;
-      margin: 0 auto !important;
-      display: block !important;
-    }
-    h4 {
-      padding-top: 10px !important;
-      
-    }
-  }
 
-  @media screen and (max-width: 400px) {
-    h4 {
-      font-size: .85rem !important;
-    }
-    .two-columns p {
-      font-size: .7rem !important;
-    }
-  }
-</style>
-</head>
-<body>
-  <center class="wrapper">
-    <table role="presentation" class="main" width="100%">
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #dad2d2; font-family: 'Source Sans Pro', sans-serif;">
 
-      <span class="preheader" style="display: none !important; visibility: hidden; opacity: 0; color: transparent; height: 0; width: 0;">Welcome to Snack Utopia! Nuts.com | 125 Moen St, Cranford, NJ 07016</span>
+  <!-- Pre header text -->
+  <div style="display: none; height: 0px; width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+    Welcome to Snack Utopia! Nuts.com | 125 Moen St, Cranford, NJ 07016
+  </div>  
 
+  <!-- Containing Table -->
+  <table role="presentation" cellspacing="0" cellpadding="0" width="100%" style="margin: auto; max-width: 600px; background-color: #efefef;" class="mso-container">
+
+    <tr>
+      <td width="100%">
+        <table role="presentation" cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+            <td width="100%" style="padding: .6em; text-align: center; background-color: #498be3;">
+              <h1 style="font-size: 1em; color: #fff; text-transform: uppercase;"><strong>Free Shipping</strong> with any $29+ order</h1>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <table role="presentation" cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+            <td>
+              <img src="https://i.ibb.co/f8VTgYB/logo.png"  alt="Logo with caption: Since 1929" title="Nuts.com" width="100%">
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: center; padding: 6px;">
+              <h2 style="font-size: 2em;">Make Today Tasty</h2>
+              <p style="font-size: 1.35em;">
+                Add these snack chomp-ions to your cart and get <strong>FREE shipping with any $29+ purchase</strong>. Offer expires soon.
+              </p>
+              <a href="https://nuts.com/" target="_blank" class="btn">Shop Now</a>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 24px 0;">
+              <img src="https://i.ibb.co/x6SnCc2/big-banner.png" alt="collection of product from nuts.com" width="100%">
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- Even Column Section -->
+    <tr>
+      <td>
+        <table role="presentation" cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+            <td style="text-align: center; padding: 0 12px;">
+              <h3 class="mobile-font" style="width: 100%; font-size: 1.75em; padding-bottom: 6px; border-bottom: 2px solid #000;">Meet The Snack Chomp-ions</h3>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- Ghost Table to create spacing in MSO -->
+    <!--[if mso]>
       <tr>
-        <td style="background-color: #498be3; color: #fff; font-size: 1rem;">
-          <p><span class="text-bold">FREE SHIPPING</span> WITH ANY $29+ ORDER</p>
-        </td>
+        <td style="padding: 14px;">
+          <table role="presentation" width="100%"></table>  
+        </td>    
       </tr>
+    <![endif]-->
 
+    <!-- Even Column 1/3 -->
+    <tr>
+      <td style="display: block; margin: 14px auto 0;">
+        <table role="presentation" cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+
+            <td width="50%">
+              <table role="presentation" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td style="padding: 6px;">
+                    <img src="https://i.ibb.co/t2JkhPj/nuts-seeds.png" alt="graphic of nuts and seeds" width="100%">
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td width="50%">
+              <table role="presentation" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td style="padding: 6px;">
+                    <img src="https://i.ibb.co/TP0qnhb/dried-fruit.png" alt="graphic of dried fruit" width="100%">
+                  </td>
+                </tr>
+              </table>
+            </td>
+
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- Even Column 2/3 -->
+    <tr>
+      <td style="display: block; margin: 0 auto;">
+        <table role="presentation" cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+
+            <td width="50%">
+              <table role="presentation" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td style="padding: 6px;">
+                    <img src="https://i.ibb.co/LS9dHwr/snacks.png" alt="graphic of trail mix" width="100%">
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td width="50%">
+              <table role="presentation" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td style="padding: 6px;">
+                    <img src="https://i.ibb.co/6g8TTXS/cookies.png" alt="graphic of chocolate candies" width="100%">
+                  </td>
+                </tr>
+              </table>
+            </td>
+
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- Even Column 3/3 -->
+    <tr>
+      <td style="display: block; margin: 0 auto 28px;">
+        <table role="presentation" cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+
+            <td width="50%">
+              <table role="presentation" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td style="padding: 6px;">
+                    <img src="https://i.ibb.co/CzT4PvL/sweets.png" alt="graphic of gummy worms" width="100%">
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td width="50%">
+              <table role="presentation" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td style="padding: 6px;">
+                    <img src="https://i.ibb.co/TmYPT3t/gifts.png" alt="graphic of chocolate covered pretzels" width="100%">
+                  </td>
+                </tr>
+              </table>
+            </td>
+
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- Ghost Table to create spacing in MSO -->
+    <!--[if mso]>
       <tr>
-        <td>
-          <table role="presentation" width="100%">
-            <tr>
-              <td style="background-color: #ffefef;">
-                <img src="https://i.ibb.co/f8VTgYB/logo.png"  alt="Logo with caption: Since 1929" title="Nuts.com">
-                <h1>Make Today Tasty</h1>
-                <p class="product-info">
-                  Add these snack chomp-ions to your cart and get <span class="text-bold">FREE shipping with any $29+ purchase.</span> Offer expires soon.
+        <td style="padding: 10px;">
+          <table role="presentation" width="100%"></table>  
+        </td>    
+      </tr>
+    <![endif]-->
+
+    <tr>
+      <td>
+        <table role="presentation" cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+            <td style="text-align: center; padding: 0 0 16px;">
+              <a href="https://nuts.com/" class="btn">Shop All</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <!-- End Even Column Section -->
+
+    <!-- Ghost Table to create spacing in MSO -->
+    <!--[if mso]>
+      <tr>
+        <td style="padding: 10px;">
+          <table role="presentation" width="100%"></table>  
+        </td>    
+      </tr>
+    <![endif]-->
+
+    <tr>
+      <td style="background-color: #e0b807;">
+        <table role="presentation" cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+            <td>
+              <img src="https://i.ibb.co/VYGVgWV/big-banner02.png" alt="package of mixed nuts and snacks" width="100%">
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: center; padding: 1em;">
+              <h3 style="font-size: 2em;">Gift Snack Happy</h3>
+              <p style="font-size: 1.35em;">
+                Find the perfect present for everybody and every occasion at your fingertips, curated by our gifting specialists.
+              </p>
+              <a href="https://nuts.com/" class="btn">Shop Now</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- Solo Even Column Section -->
+    <tr>
+      <td>
+        <table role="presentation" cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+
+            <td width="50%">
+              <table role="presentation" cellspacing="0" cellpadding="0" class="column">
+                <tr>
+                  <td style="text-align: left; padding:14px;">
+                    <table role="presentation" width="100%" style="text-align: left;">
+                      <h4 style="font-size: 1.75em; margin-bottom: 4px;">FREE <br>Shipping</h4>
+                      <span style="font-size: 1em;"><strong>With any $29+ purchase</strong></span>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td width="50%">
+              <table role="presentation" cellspacing="0" cellpadding="0" class="column">
+                <tr>
+                  <td>
+                    <img src="https://i.ibb.co/9WGgx3t/small-banner.png" alt="collection of nuts.com snacks" width="100%" height="100%" style="margin: 0; padding: 0; display: block;">
+                  </td>
+                </tr>
+              </table>
+            </td>
+
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- 3 Column Section -->
+    <tr>
+      <td style="display: block; background-color: #fff;">
+        <table role="presentation" cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+
+            <td width="33%">
+              <table role="presentation" cellspacing="0" cellpadding="0" width="100%">
+                <tr>
+                  <td class="mobile-font" style="padding: 14px; text-align: center; font-size: 1.25em;">
+                    <span>
+                      From <br>Our Family <br>To Yours
+                    </span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td width="33%">
+              <table role="presentation" cellspacing="0" cellpadding="0" width="100%">
+                <tr>
+                  <td style="padding: 14px;">
+                    <img src="https://i.ibb.co/Jrjh5zk/footer-graphic.png" alt="graphic of happy peanuts" width="100%">
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td width="33%">
+              <table role="presentation" cellspacing="0" cellpadding="0" width="100%">
+                <tr>
+                  <td class="mobile-font" style="padding: 14px; text-align: center; font-size: 1.25em;">
+                    <span>
+                      100% <br>Satisfaction <br>Guaranteed
+                    </span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <table role="presentation" cellspacing="0" cellpadding="0" width="100%" style="background-color: #fff;">
+          <tr>
+            <td style="text-align: center;">
+
+              <!--[if mso | IE]>
+                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"><tr><td>
+              <![endif]-->
+
+                  <!-- Social link columns -->
+                  <table cellpadding="0" cellspacing="0" role="presentation" style="float: none; display: inline-table;">
+                    <tr>
+                      <td style="padding: 24px 6px;">
+                        <table cellpadding="0" cellspacing="0" role="presentation" style="width: 30px;">
+                          <tr>
+                            <td style="font-size: 0; height: 30px; width: 30px; vertical-align: middle;">
+                              <a href="https://www.facebook.com/NutsDotCom/" target="_blank">
+                                <img src="https://i.ibb.co/XyrVJs7/facebook.png" alt="Facebook logo / link" height="30" width="30">
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+              <!--[if mso | IE]>
+                </td>
+            
+                <td>
+              <![endif]-->    
+
+                  <table cellpadding="0" cellspacing="0" role="presentation" style="float: none; display: inline-table;">
+                    <tr>
+                      <td style="padding: 24px 6px;">
+                        <table cellpadding="0" cellspacing="0" role="presentation" style="width: 30px;">
+                          <tr>
+                            <td style="font-size: 0; height: 30px; width: 30px; vertical-align: middle;">
+                              <a href="https://www.instagram.com/nutsdotcom/" target="_blank">
+                                <img src="https://i.ibb.co/LgHT4QH/instagram.png" alt="Instagram logo / link" height="30" width="30">
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+                <!--[if mso | IE]>
+                  </td>
+            
+                  <td>
+                <![endif]-->      
+
+                  <table cellpadding="0" cellspacing="0" role="presentation" style="float: none; display: inline-table;">
+                    <tr>
+                      <td style="padding: 24px 6px;">
+                        <table cellpadding="0" cellspacing="0" role="presentation" style="width: 30px;">
+                          <tr>
+                            <td style="font-size: 0; height: 30px; width: 30px; vertical-align: middle;">
+                              <a href="https://www.linkedin.com/company/nutsdotcom/" target="_blank">
+                                <img src="https://i.ibb.co/yXstS6B/linkedin.png" alt="LinkedIn logo / link" height="30" width="30">
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+                        <!--[if mso | IE]>
+                              </td>
+                            </tr>
+                          </table>
+                        <![endif]-->
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- End social link columns -->
+
+            </td>
+          </tr>
+        </table>
+
+      </td>
+    </tr>
+
+    <!-- Footer -->
+    <tr>
+      <td>
+        <table role="presentation" cellspacing="0" cellpadding="0" width="100%">
+
+          <tr>
+            <td style="text-align: center;">
+              <table role="presentation" cellspacing="0" cellpadding="0" width="100%" style="text-align: center;">
+                <!--[if mso]>
+                <table>
+                  <tr><td width="580" style="text-align:center;">
+                <![endif]-->
+                <p>© 2023 Nuts.com <br>
+                125 Moen St., Cranford, NJ 07016</p>
+                <!--[if mso]>
+                </td></tr></table>
+                </center>
+                <![endif]-->
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: center;">
+              <table role="presentation" cellspacing="0" cellpadding="0" width="100%" style="text-align: center;">
+                <!--[if mso]>
+                <table>
+                  <tr><td width="580" style="text-align:center;">
+                <![endif]-->
+                <a href="#">Subscribe</a>
+                <span style="margin: 0 .35rem;"> <strong>|</strong> </span>
+                <a href="#">Contact Us</a>
+                <!--[if mso]>
+                </td></tr></table>
+                </center>
+                <![endif]-->
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: center;">
+              <table role="presentation" cellspacing="0" cellpadding="0" width="100%" style="text-align: center;">
+                <!--[if mso]>
+                <table>
+                  <tr><td width="580" style="text-align:center;">
+                <![endif]-->
+                <p style="padding: 0 1.25rem">
+                  This promo can only be redeemed by clicking through the buttons on this email. This offer expires on May 19, 2023 at 11:59 PM PDT. One redemption per customer. Cannot be combined with any other offers or substituted for another product. While supplies last.
                 </p>
-                <a href="#" class="btn text-bold" style="margin: 5px 0 20px 0;">Shop Now</a>
-                <img src="https://i.ibb.co/x6SnCc2/big-banner.png" alt="collection of product from nuts.com" style="width: 100%;">
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
+                <!--[if mso]>
+                </td></tr></table>
+                </center>
+                <![endif]-->
+              </table>
+            </td>
+          </tr>
 
-      <tr>
-        <td>
-          <table role="presentation" width="100%">
-            <tr>
-              <td style="background-color: #ffefef; padding: 1rem;">
-                <h2>Meet The Snack Chomp-ions</h2>
-                <table role="presentation" width="100%">
-                  <tr>
-                    <td class="img-grid">
-                      <img src="https://i.ibb.co/t2JkhPj/nuts-seeds.png" alt="graphic of nuts and seeds" class="img"> 
-                      <img src="https://i.ibb.co/TP0qnhb/dried-fruit.png" alt="graphic of dried fruit" class="img">
-                      <img src="https://i.ibb.co/LS9dHwr/snacks.png" alt="graphic of trail mix" class="img">
-                      <img src="https://i.ibb.co/6g8TTXS/cookies.png" alt="graphic of chocolate candies" class="img">
-                      <img src="https://i.ibb.co/CzT4PvL/sweets.png" alt="graphic of gummy worms" class="img">
-                      <img src="https://i.ibb.co/TmYPT3t/gifts.png" alt="graphic of chocolate covered pretzels" class="img">
-                    </td>
-                  </tr>
-                </table>
-                <a href="#" class="btn text-bold" style="margin: 0 0 1rem 0">Shop All</a>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
+        </table>
+      </td>
+    </tr>
 
-      <tr>
-        <td>
-          <table role="presentation" width="100%">
-            <tr>
-              <td style="background-color: #e0b807; padding: 0 1.25rem 2rem 1.25rem">
-                <img src="https://i.ibb.co/VYGVgWV/big-banner02.png" alt="package of mixed nuts and snacks">
-                <h3>Gift Snack Happy</h3>
-                <p class="product-info">
-                  Find the perfect present for everybody and every occasion at your fingertips, curated by our gifting specialists.
-                </p>
-                <a href="#" class="btn text-bold">Shop Now</a>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
 
-      <tr>
-        <td class="two-columns" style="background-color: #ffefef; text-align: right;">
-          <table role="presentation" class="column">
-            <tr>
-              <td class="column-left">
-                <h4 style="margin: 0;">FREE <br>Shipping</h4>
-                <p class="text-bold" style="font-size: .85rem;">With any $29+ purchase</p>
-              </td>
-            </tr>
-          </table>
-          <table role="presentation" class="column">
-            <tr>
-              <td>
-                <img src="https://i.ibb.co/9WGgx3t/small-banner.png" alt="collection of nuts.com snacks">
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-
-      <tr>
-        <td class="three-columns" style="background-color: #fff;">
-
-          <table role="presentation" class="column">
-            <tr>
-              <td>
-                <p class="footer-signoff text-bold" style="padding-left: 35px;">
-                  From <br>Our Family <br>To Yours
-                </p>
-              </td>
-            </tr>
-          </table>
-
-          <table role="presentation" class="column">
-            <tr>
-              <td>
-                <img src="https://i.ibb.co/Jrjh5zk/footer-graphic.png" alt="graphic of happy peanuts">
-              </td>
-            </tr>
-          </table>
-
-          <table role="presentation" class="column">
-            <tr>
-              <td>
-                <p class="footer-signoff text-bold" style="padding-left: 30px;">
-                  100% <br>Satisfaction <br>Guaranteed
-                </p>
-              </td>
-            </tr>
-          </table>
-
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <table role="presentation" width="100%" style="background-color: #fff;">
-            <tr>
-              <td>
-                <table role="presentation" width="100%" style="margin: 3rem 0 2rem 0;">
-                  <tr>
-                    <td>
-                      <a href="https://www.facebook.com/NutsDotCom/" target="_blank" style="text-decoration: none;">
-                        <img src="https://i.ibb.co/XyrVJs7/facebook.png" alt="Facebook logo / link" height="30">
-                      </a>
-                      <a href="https://www.instagram.com/nutsdotcom/" target="_blank" style="text-decoration: none;">
-                        <img src="https://i.ibb.co/LgHT4QH/instagram.png" alt="Instagram logo / link" height="30">
-                      </a>
-                      <a href="https://www.linkedin.com/company/nutsdotcom/" target="_blank" style="text-decoration: none;">
-                        <img src="https://i.ibb.co/yXstS6B/linkedin.png" alt="LinkedIn logo / link" height="30">
-                      </a>
-                    </td>
-                  </tr>
-                </table>
-      
-                <table role="presentation" width="100%">
-                  <tr>
-                    <td style="font-family: initial; font-size: 14px;">
-                      <table width="100%">
-                        <tr>
-                          <td>
-                            <p>© 2023 Nuts.com</p>
-                            <p>125 Moen St., Cranford, NJ 07016</p>
-                          </td>
-                        </tr>
-                      </table>
-                      <table role="presentation" width="100%">
-                        <tr>
-                          <td>
-                            <a href="#">Subscribe</a>
-                            <span class="text-bold" style="margin: 0 .35rem;"> | </span>
-                            <a href="#">Contact Us</a>
-                          </td>
-                        </tr>
-                      </table>
-                      <table role="presentation" width="100%">
-                        <tr>
-                          <td>
-                            <p style="padding: 0 1.25rem">
-                              This promo can only be redeemed by clicking through the buttons on this email. This offer expires on May 19, 2023 at 11:59 PM PDT. One redemption per customer. Cannot be combined with any other offers or substituted for another product. While supplies last.
-                            </p>
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-
-    </table>
-  </center>
+  <!-- End Table Container -->
+  </table>  
 </body>
